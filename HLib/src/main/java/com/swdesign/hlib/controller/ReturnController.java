@@ -13,8 +13,18 @@ public class ReturnController {
 	
 	IReturn iReturn;
 
+	@RequestMapping("/returnRequest")
+	public String ReturnRequest(HttpServletRequest request, Model model) {
+		System.out.println("/returnRequest");
+		
+		iReturn = new ReturnRequest();
+		
+		model.addAttribute("request", request);
+		iReturn.execute(model);
+		return "return";
+	}
 	
-	//? post..?
+	
 	@RequestMapping("/return")
 	public String Return(HttpServletRequest request, Model model){
 		
