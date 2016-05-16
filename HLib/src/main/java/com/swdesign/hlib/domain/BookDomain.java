@@ -30,7 +30,7 @@ public class BookDomain {
 		this.bookName = bookName;
 	}
 
-	public boolean isBookState() {
+	public boolean getBookState() {
 		return bookState;
 	}
 
