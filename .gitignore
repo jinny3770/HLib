@@ -2,23 +2,26 @@
 
 ### Eclipse ###
 
-.metadata
-bin/
-tmp/
+*.metadata/
+bin/*
+tmp/*
 *.tmp
 *.bak
 *.swp
 *~.nib
 local.properties
-.settings/
-.loadpath
-.recommenders
+*.settings/
+*.loadpath
+*.recommenders
+*.plugins/
+
+Server/*
 
 # Eclipse Core
-.project
+*.project
 
 # External tool builders
-.externalToolBuilders/
+*.externalToolBuilders/
 
 # Locally stored "Eclipse launch configurations"
 *.launch
@@ -27,38 +30,38 @@ local.properties
 *.pydevproject
 
 # CDT-specific (C/C++ Development Tooling)
-.cproject
+*.cproject
 
 # JDT-specific (Eclipse Java Development Tools)
-.classpath
+*.classpath
 
 # Java annotation processor (APT)
-.factorypath
+*.factorypath
 
 # PDT-specific (PHP Development Tools)
-.buildpath
+*.buildpath
 
 # sbteclipse plugin
-.target
+*.target
 
 # Tern plugin
-.tern-project
+*.tern-project
 
 # TeXlipse plugin
-.texlipse
+*.texlipse
 
 # STS (Spring Tool Suite)
-.springBeans
+*.springBeans
 
 # Code Recommenders
-.recommenders/
+*.recommenders/
 
 
 ### Java ###
 *.class
 
 # Mobile Tools for Java (J2ME)
-.mtj.tmp/
+*.mtj.tmp/
 
 # Package Files #
 *.jar
