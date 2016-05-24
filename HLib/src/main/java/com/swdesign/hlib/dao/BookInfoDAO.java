@@ -37,7 +37,7 @@ public class BookInfoDAO {
 
 		try {
 			conn = dataSource.getConnection();
-			String query = "select * from BookInfo where =\"" + ISBN + "\"";
+			String query = "select * from BookInfo where ISBN=\"" + ISBN + "\"";
 			preparedStatement = conn.prepareStatement("");
 			resultSet = preparedStatement.executeQuery();
 

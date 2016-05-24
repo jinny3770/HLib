@@ -36,7 +36,7 @@ public class MemberInfoDAO {
 		
 		try {
 			conn = dataSource.getConnection();
-			String query = "select * from MemberInfo where =\"" + memberID + "\"";
+			String query = "select * from MemberInfo where MemberID=\"" + memberID + "\"";
 			preparedStatement = conn.prepareStatement("");
 			resultSet = preparedStatement.executeQuery();
 
@@ -73,6 +73,30 @@ public class MemberInfoDAO {
 	}
 	
 	public void saveMember(MemberDomain memberDomain) {
-		
+		try {
+			conn = dataSource.getConnection();
+			String query = "update MemberInfo set where MemberID=\"" + memberDomain.getMemberID()
+			+ "\", AllPoint=\"" + memberDomain.getAllPoint() + "\", MonthPoint=" + memberDomain.getMonthPoint() 
+			+ "\", BorrowableTerm=\"" + memberDomain.getBorrowableTerm()
+			+ "\", BorrowableBookCount=" + memberDomain.getBorrowableBookCount()
+			+ "\", BorrowedBookCount=" + memberDomain.getBorrowedBookCount();
+			
+			preparedStatement = conn.prepareStatement("");
+			resultSet = preparedStatement.executeQuery();
+
+		} catch (Exception e) {
+		}
+
+		finally {
+			try {
+				if (resultSet != null)
+					resultSet.close();
+				if (preparedStatement != null)
+					preparedStatement.close();
+				if (conn != null)
+					conn.close();
+			} catch (Exception e) {	}
+
+		}
 	}
 }
